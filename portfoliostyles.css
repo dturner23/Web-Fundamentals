@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+#wrapper {
+    width: 970px;
+    margin: auto;
+    background-color:#fafafa;
+}
+#header {
+    padding: 10px;
+}
+#header, ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+h1 {
+    flex: 1;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+#main {
+    display: block;
+    padding: 20px;
+    background-color: gray;
+    background-image: radial-gradient(#6f5964, #6f5964, #1e0d12);
+}
+#about {
+    display: flex;
+}
+#about_photo img {
+    width: 400px;
+    border: gray 4px solid;
+}
+#about_details {
+    display: block;
+    margin: 0px 10px 0px 25px;
+    height: 270px;
+    background-color: darkgray;
+    background-image: linear-gradient(to bottom right, #fffeff, #dbccda);
+}
+#about_details h2 {
+    background: linear-gradient(rgb(171, 170, 175), rgb(135, 133, 147), rgb(171, 170, 175));
+    font-family: "Arial", "Helvetica", sans-serif;
+    color: white;
+    font-size: 16px;
+    height: 30px;
+}
+p {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+a {
+    color: black;
+}
+#projects {
+    display: flex;
+}
+.project {
+    width: 300px;
+    margin: 10px;
+    background-color: darkgray;
+    background-image: linear-gradient(to bottom right, #fffeff, #dbccda);
+}
+.project img {
+    width: 290px;
+}
+.project_header {
+    height: 30px;
+    color: white;
+    font-family: "Arial", "Helvetica", sans-serif;
+    font-size: 14px;
+    background: linear-gradient(rgb(171, 170, 175), rgb(135, 133, 147), rgb(171, 170, 175));
+}
+button {
+    color: white;
+    background-color: #407d61;
+    border-radius: 10px;
+    font-size: 14px;
+    margin: 20px 20px 20px 100px;
+}
+.Icons img {
+    width: 40px;
+    display: inline-flex;
+    padding: 5px;
+}
+#footer{
+    width: auto;
+    height: 100px;
+    background-color: rgb(250, 250, 250);
+    font-family: "Arial", "Helvetica", sans-serif;
+    text-align: center;
+}
+#footer_images{
+    text-align: center;
+    display: inline-block;
+    font-style: italic;
+}
+#footer_images img{
+    width: 20px;
+}
