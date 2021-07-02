@@ -1,0 +1,24 @@
+* {
+    outline: 1px solid none;
+}
+h1 {
+    text-align: center;
+}
+hr {
+    border: 0;
+    border-top: 2px solid black;
+    margin: 20px;
+}
+p {
+    text-align: center;
+}
+button {
+    margin-left: 25px;
+    display: inline-block;
+}
+.red {
+    color: red;
+}
+.img {
+    width: 50px;
+}

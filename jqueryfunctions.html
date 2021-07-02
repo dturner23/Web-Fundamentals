@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>jQuery Functions</title>
+        <meta name="description" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="jqueryfunctionsstyle.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    </head>
+        <body>
+        <h1>Click</h1>
+        <button id="b4">Click</button>
+        <p id="p4">Click the button to trigger an alert.</p>
+        <hr />
+        <h1>Hide</h1>
+        <button id="b5">Hide</button>
+        <p id="p5">
+        Click button to hide the <span id="s5">&#128178;&#128178;&#128178;</span>
+        </p>
+        <hr />
+        <h1>Show</h1>
+        <button id="b6">Show</button>
+        <p id="p6">
+        Click button to show the
+        <span id="s6" style="display: none">&#128178;&#128178;&#128178;</span>
+        </p>
+        <hr />
+        <h1>Toggle</h1>
+        <button id="b7">Toggle</button>
+        <p id="p7">
+        Click button to toggle the
+        <span id="s7">&#128178;&#128178;&#128178;</span>
+        </p>
+        <hr />
+        <h1>Slide Down</h1>
+        <button id="b8">Slide Down</button>
+        <p id="p8">Click the button to slide the image down</p>
+        <img src="Portfolio-Images\angular.png" id="img8" class="img" alt="angular" style="display:none;"> 
+        <hr />
+        <h1>Slide Up</h1>
+        <button id="b9">Slide Up</button>
+        <p id="p9">Click the button to slide the image up (like a window shade)</p>
+        <img src="Portfolio-Images\bootstrap.png" id="img9" class="img" alt="bootstrap" />
+        <hr />
+        <h1>Slide Toggle</h1>
+        <button id="b2">Slide Toggle</button>
+        <p id="p2">Click the button to Slide Toggle a hidden image.</p>
+        <img src="Portfolio-Images/JavaScript.png" id="img2" class="img" alt="JavaScript"> 
+        <hr />
+        <h1>Fade In</h1>
+        <button id="b10">Fade In</button>
+        <p id="p10">Click the button to fade in the image</p>
+        <img src="Portfolio-Images\c-sharp.png" id="img10" class="img" alt="c-sharp" style="display: none"/>
+        <hr />
+        <h1>Fade Out</h1>
+        <button id="b11">Fade Out</button>
+        <p id="p11">Click the button to fade out the image</p>
+        <img src="Portfolio-Images\codeigniter.png" id="img11" class="img" alt="codeigniter" />
+        <hr />
+        <h1>Add Class</h1>
+        <button id="b1">Add Class</button>
+        <p id="p1">Click the button to add class 'red' to this paragraph.</p>
+        <hr />
+        <h1>Before</h1>
+        <button id="b12">Before</button>
+        <p id="p12">Click the button to</p>
+        <hr />
+        <h1>After</h1>
+        <button id="b13">After</button>
+        <p id="p13">Click the button to</p>
+        <hr />
+        <h1>Append</h1>
+        <button id="b3">Append</button>
+        <p id="p3">Click the button to append a new paragraph!</p>
+        <hr />
+        <h1>HTML</h1>
+        <button id="b14">HTML</button>
+        <p id="p14">Click the button to</p>
+        <hr />
+        <h1>Attr</h1>
+        <button id="b15">Attr</button>
+        <p id="p15">Click the button to see the "alt" attribute of the image:</p>
+        <img src="Portfolio-Images\codepen.png" id="img15" class="img" alt="codepen" />
+        <hr />
+        <h1>Val</h1>
+        <button id="b16">Val</button>
+        <p id="p16">Click the button to vote for your favorite:</p>
+        <select id="choice">
+            <option>Golf</option>
+            <option>Baseball</option>
+            <option>Football</option>
+            <option>Soccer</option>
+            <option>Basketball</option>
+        </select>
+        <hr />
+        <h1>Text</h1>
+        <button id="b17">Text</button>
+        <p id="p17">Click the button to</p>
+        <hr />
+
+
+        <script>
+            $(function () {
+            $("#b1").click(function () {
+                $("#p1").addClass("red");
+            });
+            $("#b2").click(function () {
+                $("#img2").slideToggle("slow");
+            });
+            $("#b3").click(function () {
+                $("#p3").append(
+                "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore nmagna aliqua. Sagittis aliquam malesuada bibendum arcu. Purus semper eget duis at tellus at urna condimentum."
+                );
+            });
+            $("#b4").click(function () {
+                alert("Hey, you clicked!");
+            });
+            $("#b5").click(function () {
+                $("#s5").hide("slow");
+            });
+            $("#b6").click(function () {
+                $("#s6").show("slow");
+            });
+            $("#b7").click(function () {
+                $("#s7").toggle("slow");
+            });
+            $("#b8").click(function () {
+                $("#img8").slideDown("slow");
+            });
+            $("#b9").click(function () {
+                $("#img9").slideUp("slow");
+            });
+            $("#b10").click(function () {
+                $("#img10").fadeIn("slow");
+            });
+            $("#b11").click(function () {
+                $("#img11").fadeOut("slow");
+            });
+            $("#b12").click(function () {
+                $("#p12").before("<p><b>Lorem ipsum");
+            });
+            $("#b13").click(function () {
+                $("#p13").after("<p><b>Lorem ipsum</b>");
+            });
+            $("#b14").click(function () {
+                $("#p14").html("<p class='red'>HTML HTML HTML</p>");
+            });
+            $("#b15").click(function () {
+                var alt = $("#img15").attr("alt");
+                $("#p15").html("<p>" + alt);
+            });
+            $("#b16").click(function () {
+                var value = $("#choice").val();
+                $("#p16").text("Your fav:  " + value);
+            });
+            $("#b17").click(function () {
+                $("#p17").text("Some other text");
+            });
+            });
+        </script>
+    </body>
+</html>
